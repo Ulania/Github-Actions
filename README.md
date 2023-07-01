@@ -3,8 +3,7 @@ The project consists of three parts.
 
 The First part aims to demonstrate the ability to create functions and handle errors, as well as utilize an external library for advanced mathematical operations. Additionally, the project includes unit tests to ensure the correctness of the code.
 
-Second part:
-
+Second part should handle the error when dividing by zero and include appropriate tests, including tests to verify the handling of this error. The application is also containerized using Docker, which facilitates its deployment and execution in different environments.
 
 Third part:
 
@@ -51,6 +50,32 @@ For the division function, we handle the error by checking if the denominator va
 
 
 ## Second part:
+1. Created code that contains 3 functions (subtraction, multiplication, division) and they are attached to 3 different endpoints (e.g., api/add; api/sub).
+![1](https://github.com/Ulania/Github-Actions/assets/96245511/50a40946-5ddd-4213-a688-f3a0639039be)
+
+2. For the division function, an error is handled when the denominator value is equal to 0 (returning a bad request 400).
+![2](https://github.com/Ulania/Github-Actions/assets/96245511/4ebccfa7-ed4f-4430-bfed-f147cea45005)
+
+3. Tests for each endpoint.
+![3](https://github.com/Ulania/Github-Actions/assets/96245511/af4659cc-5213-4734-b3bb-7a6e13ddc1fa)
+
+    Created a Dockerfile that deploys the REST API application in a container (without tests).
+![4](https://github.com/Ulania/Github-Actions/assets/96245511/22c71ad8-53db-4d79-8fe7-44c5ee738f98)
+
+    ![5](https://github.com/Ulania/Github-Actions/assets/96245511/6c397ee3-09a3-4f0f-a03b-0f9058cfd559)
+
+    ![6](https://github.com/Ulania/Github-Actions/assets/96245511/22cc1ac2-afa0-487b-b4fa-88cd4f7a4b30)
+
+4. Ran tests locally to verify if all of them pass.
+![7](https://github.com/Ulania/Github-Actions/assets/96245511/c8725ac6-e814-494a-b453-40d52b904622)
+
+5. Built a Git action that, upon committing to the main/master branch:
+
+- Sets up the test environment.
+- Builds the image locally and runs the image with the REST API application.
+- Runs tests related to sending requests to the REST API from the test environment (no additional Docker is built for tests).
+![8](https://github.com/Ulania/Github-Actions/assets/96245511/a495cdd3-1ca4-4d98-ae6f-7e9260a6d5ff)
+
 
 
 ## Third part:
