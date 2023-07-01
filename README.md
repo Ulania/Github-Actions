@@ -5,7 +5,7 @@ The First part aims to demonstrate the ability to create functions and handle er
 
 Second part should handle the error when dividing by zero and include appropriate tests, including tests to verify the handling of this error. The application is also containerized using Docker, which facilitates its deployment and execution in different environments.
 
-Third part:
+In third were made part pull requests to integrate the changes from the respective branches. After completing the tests and fixing any errors, the application image was pushed to Docker Hub. Merging was also performed between branches to combine the introduced changes.
 
 
 ## First part:
@@ -79,3 +79,52 @@ For the division function, we handle the error by checking if the denominator va
 
 
 ## Third part:
+1. Three branches were created (test, dev, dev_feature_1).
+![1](https://github.com/Ulania/Github-Actions/assets/96245511/452a77e9-8619-4188-96b8-12965eed861e)
+
+2. On the dev branch, unit tests were run for the pull request (lab 05).
+    ![2](https://github.com/Ulania/Github-Actions/assets/96245511/610d0a73-f362-476b-a79d-5885380fa9da)
+
+    ![3](https://github.com/Ulania/Github-Actions/assets/96245511/554719af-ce4f-4bb8-8549-51ad6b10312a)
+
+3. On the test branch, functional tests were run for the pull request (second part of the project).
+    ![4](https://github.com/Ulania/Github-Actions/assets/96245511/f53d882a-5460-431f-b894-7d0235d3a2fe)
+
+    ![5](https://github.com/Ulania/Github-Actions/assets/96245511/927024ea-a987-4f38-87fb-c203320dcf9a)
+
+    Pull requests:
+    ![6](https://github.com/Ulania/Github-Actions/assets/96245511/fd874f80-a785-468d-936e-a94ee6df5b57)
+
+4. Push to Docker Hub was performed.
+-> Login and password were placed in the repository secrets:
+
+    ![7](https://github.com/Ulania/Github-Actions/assets/96245511/35215c1a-7d6b-4b3d-a05c-42bf7a0729af)
+
+    ![8](https://github.com/Ulania/Github-Actions/assets/96245511/5a7f7d43-1c66-4296-ad9c-4ef2e884a842)
+
+    ![9](https://github.com/Ulania/Github-Actions/assets/96245511/5b9a98a7-5570-4421-bcd7-86254b51206e)
+
+5. Changes were made to the program code in the dev_feature_1 branch.
+An addition operation was added:
+
+    ![10](https://github.com/Ulania/Github-Actions/assets/96245511/a83dc806-9708-4cc6-9bb3-a32fcdadd8b5)
+
+6. The dev_feature_1 branch was merged into the dev branch using a pull request:
+![11](https://github.com/Ulania/Github-Actions/assets/96245511/958720f0-a1b2-497c-8267-42c33226807b)
+
+7. The dev branch was merged into the test branch using a pull request:
+-> A test was performed for a situation where the application fails the tests.
+On the dev branch, a pull request with a failure in the tests:
+    ![12](https://github.com/Ulania/Github-Actions/assets/96245511/8fe75582-a287-46f4-8ec1-73875d29bf52)
+
+    The application was not pushed to Docker Hub on the test branch:
+![13](https://github.com/Ulania/Github-Actions/assets/96245511/af85bfeb-f3e2-4edb-ac00-e70bd60834f1)
+
+    -> After fixing the issues, the tests were executed:
+    ![14](https://github.com/Ulania/Github-Actions/assets/96245511/496288dc-4691-471b-b231-ae2f5243c9e1)
+
+    And after passing the tests, the image appeared on Docker Hub:
+    ![15](https://github.com/Ulania/Github-Actions/assets/96245511/ff224103-ed45-42a8-a478-9eec04fdbf6b)
+
+    Merge was performed:
+    ![16](https://github.com/Ulania/Github-Actions/assets/96245511/994ec636-9277-401f-b749-50e2b0f8c325)
